@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2fff2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            background: white;
+            padding: 30px;
+            margin: 120px auto 40px auto;
+            /* pushed down because nav is fixed */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Added Animation */
+            animation: slideIn 1s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #1f4d1f;
+            padding: 10px;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            color: #255a25;
+            margin-top: 25px;
+        }
+
+        ul {
+            line-height: 1.7;
+        }
+
+        .note {
+            background: #e9ffe9;
+            padding: 12px;
+            border-left: 4px solid #1f4d1f;
+            margin-top: 20px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Clean Energy</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="guide.html">Installation</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Solar Panel Installation Guide</h1>
+        <p>This easy installation guide will help you understand how solar panels are safely installed.</p>
+
+        <h2>1. Choose the Right Location</h2>
+        <ul>
+            <li>Pick a sunny area with no shade.</li>
+            <li>South-facing roofs give maximum power in India.</li>
+            <li>Ensure the roof is strong enough.</li>
+        </ul>
+
+        <h2>2. Install the Mounting Structure</h2>
+        <ul>
+            <li>Use high-quality mounting frames.</li>
+            <li>Fix them tightly using stainless steel bolts.</li>
+            <li>Ideal tilt angle: 25°–35°.</li>
+        </ul>
+
+        <h2>3. Fix Solar Panels</h2>
+        <ul>
+            <li>Place panels carefully on the frame.</li>
+            <li>Tighten clamps properly.</li>
+        </ul>
+
+        <h2>4. Wiring</h2>
+        <ul>
+            <li>Use MC4 connectors.</li>
+            <li>Connect panels in series/parallel as required.</li>
+            <li>Ensure insulation & safety.</li>
+        </ul>
+
+        <h2>5. Connect the Inverter</h2>
+        <ul>
+            <li>Connect DC output of panels to inverter.</li>
+            <li>Connect AC output to your home power line.</li>
+        </ul>
+
+        <h2>6. Safety Checks</h2>
+        <ul>
+            <li>Install proper earthing.</li>
+            <li>Add lightning protection if required.</li>
+            <li>Always wear safety equipment: harnesses, gloves, and eye protection.</li>
+            <li>Work with a partner — never work alone on roofs.</li>
+            <li>Use proper rated tools for electrical work and double-check wiring labels.</li>
+            <li>Keep panels covered or oriented to reduce current while wiring (use manufacturer protective caps on
+                connectors).</li>
+            <li>Follow weather conditions — avoid wet or windy days for rooftop work.</li>
+        </ul>
+
+        <h2>7. Tools </h2>
+        <ul>
+            <li>Drill and screwdriver set</li>
+            <li>Wrenches and socket set</li>
+            <li>Wire stripper and crimper</li>
+            <li>Multimeter</li>
+            <li>Ladder and roof safety harness</li>
+            <li>Measuring tape and marker</li>
+        </ul>
+
+        <h2>8. Materials </h2>
+        <ul>
+            <li>Solar panels (appropriate wattage for your needs)</li>
+            <li>Mounting rails and brackets (roof compatible)</li>
+            <li>Inverter (string or micro-inverter)</li>
+            <li>MC4 connectors and cabling</li>
+            <li>Earthing/grounding kit</li>
+            <li>Combiner box and fuses (if required)</li>
+        </ul>
+
+        <h2>9. Maintenance & Troubleshooting</h2>
+        <h3>Regular maintenance</h3>
+        <ul>
+            <li>Clean panels lightly with water every 6–12 months if dusty.</li>
+            <li>Inspect mounts and wiring for corrosion or loose fasteners annually.</li>
+            <li>Check inverter display/logs for warnings; note generation trends.</li>
+        </ul>
+        <h3>Common issues</h3>
+        <ul>
+            <li>Low generation: check for shading, dirty panels, or inverter faults.</li>
+            <li>Tripping breakers: inspect wiring and fuses, consult electrician.</li>
+        </ul>
+
+        <div class="note">
+            <strong>Note:</strong> For electrical wiring, it's always safer to consult a certified solar technician.
+        </div>
+    </div>
+
+</body>
+
+</html>

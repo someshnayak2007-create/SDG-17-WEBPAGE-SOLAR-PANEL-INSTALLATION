@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Cost Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2fff2;
+        }
+
+        /* --- SAME NAVIGATION AS HOME --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            margin: 120px auto 40px;
+            /* pushed down due to navbar */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border-radius: 8px;
+            border: 1px solid #8ed78e;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #e9ffe9;
+            border-left: 5px solid #1f4d1f;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <div class="logo">Clean Energy</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="guide.html">Installation</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align:center; color:#1f4d1f;">Advanced Solar Cost Calculator</h1> <br><br><br><br>
+
+        <label>Total Required kW:</label>
+        <input type="number" id="kw" placeholder="Example : 3 (for 3 KW)" required>
+
+        <label>Cost per kW (₹):</label>
+        <input type="number" id="cost" placeholder="Example : 50000" required>
+
+        <label>Installation Charges (₹):</label>
+        <input type="number" id="install" placeholder="Example : 1500" required>
+
+        <label>Electricity Rate per Unit (₹):</label>
+        <input type="number" id="rate" placeholder="Example : 8" required>
+
+        <button onclick="calculate()">Calculate</button>
+
+
+        <div id="result" class="result-box"></div>
+
+        <canvas id="chart" width="400" height="220"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        function calculate() {
+            let kw = parseFloat(document.getElementById("kw").value);
+            let costPerKw = parseFloat(document.getElementById("cost").value);
+            let install = parseFloat(document.getElementById("install").value);
+            let rate = parseFloat(document.getElementById("rate").value);
+
+            if (!kw || !costPerKw || !install || !rate) {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            let totalCost = (kw * costPerKw) + install;
+            let dailyUnits = kw * 4;
+            let monthlyUnits = dailyUnits * 30;
+            let monthlySavings = monthlyUnits * rate;
+            let yearlySavings = monthlySavings * 12;
+            let paybackYears = (totalCost / yearlySavings).toFixed(1);
+
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = `
+                <b>Total Cost:</b> ₹${totalCost.toLocaleString()}<br><br>
+                <b>Monthly Units Generated:</b> ${monthlyUnits.toFixed(1)} units<br><br>
+                <b>Monthly Savings:</b> ₹${monthlySavings.toLocaleString()}<br><br>
+                <b>Annual Savings:</b> ₹${yearlySavings.toLocaleString()}<br><br>
+                <b>Payback Period:</b> ${paybackYears} years
+            `;
+        }
+    </script>
+
+</body>
+
+</html>

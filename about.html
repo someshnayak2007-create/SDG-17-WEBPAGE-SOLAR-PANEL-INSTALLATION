@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Clean Energy</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* PAGE CONTENT */
+        .about-container {
+            padding: 120px 10% 60px;
+            text-align: center;
+            /* Added Animation */
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-family: lora;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        /* CARDS */
+        .cards {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            /* Added Animation */
+            animation: slideIn 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        .card {
+            background: rgb(207, 255, 217);
+            width: 300px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Clean Energy</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html" style="color:#4CAF50;">About</a></li>
+            <li><a href="guide.html">Installation</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <h1>About Solar Energy</h1>
+
+        <p>
+            Solar energy is one of the cleanest and most abundant renewable energy sources available today.
+            It converts sunlight into electricity without causing pollution or harming the environment.
+            By using solar power, homes and businesses can reduce their electricity bills, support
+            sustainability, and contribute to a cleaner future for the planet.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌞 Clean & Renewable</h3>
+                <p>Solar energy produces zero emissions and is completely environmentally friendly.</p>
+            </div>
+
+            <div class="card">
+                <h3>💰 Saves Money</h3>
+                <p>Solar panels significantly reduce electricity bills after installation.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Reliable Energy</h3>
+                <p>Solar provides long-term, reliable electricity without depending on the grid.</p>
+            </div>
+
+        </div>
+
+        <div style="
+            margin-top: 70px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Added Animation */
+            animation: fadeIn 1s ease-out 1s forwards;
+            opacity: 0;
+         ">
+            <h2 style="font-size: 32px; margin-bottom: 15px; font-family: lora;">SDG 7: Affordable and Clean Energy</h2>
+
+            <p style="font-size: 19px; line-height: 1.6;">
+                SDG 7 focuses on "Affordable and Clean Energy". It aims to ensure access to affordable, reliable,
+                sustainable, and modern energy for all. This includes improving energy efficiency, increasing the use of
+                renewable energy sources, and expanding access to energy, especially in regions that are currently
+                underserved or lacking electricity infrastructure. <br>
+
+                The specific targets under SDG 7 include: <br>
+
+                Universal access to energy: Ensuring everyone has access to affordable and reliable modern energy
+                services. <br>
+
+                Increasing renewable energy: Substantially increasing the share of renewable energy in the global energy
+                <br>
+                mix.
+
+                Energy efficiency: Doubling the rate of improvement in energy efficiency. <br>
+
+                International cooperation: Promoting research and development of clean and renewable energy
+                technologies, especially in developing countries. <br>
+            </p>
+        </div>
+        <div style="
+            margin-top: 70px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            /* Added Animation */
+            animation: fadeIn 1s ease-out 1.5s forwards;
+            opacity: 0;
+         ">
+            <p style="font-size: 19px; line-height: 1.6; margin-top: 15px;">
+                <b style="font-size: 32px; margin-bottom: 15px; font-family: lora;">Why SDG-7 Matters</b> <br>
+                <u><b>SDG 7 is critical for several reasons:</b></u> <br><br>
+
+                Economic Development: Energy is a key driver of economic growth. Without reliable energy, industries,
+                businesses, and communities cannot thrive. Access to affordable energy promotes job creation, poverty
+                reduction, and overall development. <br><br>
+
+                Poverty Reduction: More than 700 million people around the world still lack access to electricity.
+                Without electricity, people are forced to rely on inefficient and often dangerous energy sources like
+                kerosene or wood. This limits their ability to improve their lives. <br><br>
+
+                Health and Well-being: Clean energy improves health outcomes by reducing air pollution. For example,
+                transitioning away from biomass burning (like cooking with wood or charcoal) reduces respiratory
+                diseases, particularly in women and children who are most exposed to indoor air pollution. <br><br>
+
+                Environmental Impact: SDG 7 is closely linked to combating climate change. Renewable energy sources,
+                like wind, solar, and hydropower, are key to reducing carbon emissions. The shift from fossil fuels to
+                cleaner energy is essential for meeting global climate targets and reducing the impacts of climate
+                change. <br><br>
+
+                Sustainability: Energy is at the heart of many other SDGs. Access to clean energy supports education,
+                gender equality, clean water, and other sustainable development goals. It's also essential for food
+                security, transportation, and building resilient infrastructure. <br><br>
+
+                Solar energy directly supports SDG 7 by providing clean and renewable power, reducing carbon
+                emissions, and making electricity more accessible to remote and developing regions. Adopting
+                solar solutions helps the world move toward a greener and more sustainable future. <br><br>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
