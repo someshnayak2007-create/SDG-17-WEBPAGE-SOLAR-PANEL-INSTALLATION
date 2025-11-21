@@ -1,0 +1,168 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: #f4f4f4;
+            }
+
+            /* ---------------- NAVIGATION BAR ---------------- */
+            nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                padding: 15px 5%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 40px;
+                background: rgba(0, 0, 0, 0.75);
+                color: white;
+                z-index: 10;
+                backdrop-filter: blur(4px);
+            }
+
+            nav .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 25px;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: 0.3s ease-in-out;
+            }
+
+            nav ul li a:hover {
+                color: #4CAF50;
+            }
+
+            /* ---------------- GALLERY ---------------- */
+            .gallery-container {
+                margin-top: 120px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+
+            .gallery-item {
+                overflow: hidden;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.12);
+            }
+
+            /* ---------------- FULLSCREEN OVERLAY ---------------- */
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.85);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+            }
+
+            #overlay img {
+                max-width: 80%;
+                max-height: 80%;
+                border-radius: 12px;
+            }
+
+            #overlay:active {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <div class="logo">Clean Energy</div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="guide.html">Installation</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- GALLERY GRID -->
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s1.webp" onclick="openImage(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s2.webp" onclick="openImage(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s3.webp" onclick="openImage(this.src)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s4.webp" onclick="openImage(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s5.webp" onclick="openImage(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\admin\Desktop\FY_CM2-34\WT INFINITY MODEL\microproject\g\s6.webp" onclick="openImage(this.src)">
+            </div>
+        </div>
+
+        <!-- FULLSCREEN OVERLAY -->
+        <div id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage">
+        </div>
+
+        <script>
+            function openImage(src) {
+                document.getElementById("overlayImage").src = src;
+                document.getElementById("overlay").style.display = "flex";
+            }
+
+            function closeOverlay() {
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+
+    </body>
+
+    </html>
